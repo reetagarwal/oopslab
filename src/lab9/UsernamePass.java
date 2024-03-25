@@ -34,6 +34,7 @@ public class UsernamePass extends JFrame {
         c.gridy = 0;
         panel.add(usernameField, c);
 
+        c.gridx = 0;
         c.gridy = 1;
         panel.add(passwordLabel, c);
 
