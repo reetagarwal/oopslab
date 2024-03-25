@@ -17,7 +17,7 @@ public class UsernamePass extends JFrame {
         passwordLabel = new JLabel("Password:");
         usernameField = new JTextField(20);
         passwordField = new JPasswordField(20);
-        loginButton = new JButton("Submit");
+        loginButton = new JButton("SUbmit");
 
         // Arrange the components using a layout manager
         JPanel panel = new JPanel(new GridBagLayout());
