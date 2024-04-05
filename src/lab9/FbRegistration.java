@@ -5,24 +5,12 @@ import javax.swing.*;
 
 public class FbRegistration {
     JFrame f1;
-    JLabel head;
-    JLabel fn;
-    JLabel ln;
-    JLabel num;
-    JLabel email;
-    JTextField fnt;
-    JTextField lnt;
-    JTextField numt;
-    JTextField emt;
-    JLabel gender;
-    JRadioButton m;
-    JRadioButton f;
-    JLabel hob;
-    JCheckBox p;
-    JCheckBox C;
-    JCheckBox S;
-    JButton sub;
-    JButton r;
+    JLabel head,fn,ln,num,email,gender,hob;
+    JTextField fnt,lnt,numt,emt;
+    JRadioButton m,f;
+    JCheckBox p,C,S;
+    JButton sub,r;
+
 
     FbRegistration(){
         f1=new JFrame("FaceBook Form");
