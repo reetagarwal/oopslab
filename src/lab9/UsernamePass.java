@@ -1,59 +1,50 @@
 package lab9;
 
 import javax.swing.*;
-import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class UsernamePass extends JFrame {
-
-    private JLabel usernameLabel, passwordLabel;
-    private JTextField usernameField;
-    private JPasswordField passwordField;
-    private JButton loginButton;
+public class UsernamePass {
+    JFrame f;
+    JLabel head,username,password;
+    JTextField user,pass;
+    JButton submit;
 
     public UsernamePass() {
-        super("Login Page");
+        f=new JFrame();
+        head=new JLabel("Login");
+        username=new JLabel("Username");
+        password=new JLabel("Password");
+        user=new JTextField();
+        pass=new JTextField();
+        submit=new JButton("Submit");
 
-        usernameLabel = new JLabel("Username:");
-        passwordLabel = new JLabel("Password:");
-        usernameField = new JTextField(20);
-        passwordField = new JPasswordField(20);
-        loginButton = new JButton("Submit");
+        f.setLayout(null);
 
-        // Arrange the components using a layout manager
-        JPanel panel = new JPanel(new GridBagLayout());
-        GridBagConstraints c = new GridBagConstraints();
+        f.add(head);
+        f.add(username);
+        f.add(password);
+        f.add(user);
+        f.add(pass);
+        f.add(submit);
 
-        c.fill = GridBagConstraints.HORIZONTAL;
-        c.insets = new Insets(10, 10, 10, 10);
+        head.setBounds(100, 10, 200, 20);
+        username.setBounds(30, 50, 80, 20);
+        user.setBounds(120, 50, 150, 20);
+        password.setBounds(30, 80, 80, 20);
+        pass.setBounds(120, 80, 150, 20);
+        submit.setBounds(80, 130, 150, 20);
 
-        c.gridx = 0;
-        c.gridy = 0;
-        panel.add(usernameLabel, c);
+        submit.addActionListener(e -> {
 
-        c.gridx = 1;
-        c.gridy = 0;
-        panel.add(usernameField, c);
+            JOptionPane.showMessageDialog(f, "Registration submitted successfully!");
+        });
 
-        c.gridx = 0;
-        c.gridy = 1;
-        panel.add(passwordLabel, c);
-
-        c.gridx = 1;
-        c.gridy = 1;
-        panel.add(passwordField, c);
-
-        c.gridy = 2;
-        panel.add(loginButton, c);
-
-        // Add the panel to the frame
-        add(panel);
-
-        // Set frame properties
-        setSize(300, 150);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setLocationRelativeTo(null); // Center the frame on the screen
-        setVisible(true);
+        f.setSize(300,300);
+        f.setVisible(true);
+        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
+
 
     public static void main(String[] args) {
         new UsernamePass();
