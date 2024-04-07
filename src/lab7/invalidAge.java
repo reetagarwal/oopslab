@@ -20,7 +20,7 @@ class AgeError{
         try{
             validate(13);
         }catch(Exception m){
-            System.out.println("Exception occured: "+m);
+            System.out.println("Exception occured: "+m.getMessage());
         }
     }
 }
